@@ -1,0 +1,30 @@
+@import '../../../Configure/variable.scss', '../../../Configure/mixin.scss';
+
+.section{
+    padding: 100px 0;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-top: -1px;
+    &.light{
+        background-color: $black-light;
+    }
+    &.dark{
+        background-color: $black;
+    }
+    .content{
+        width: 1200px;
+        padding: 0 20px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        .section-title{
+            width: 100%;
+            max-width: 500px;
+            align-items: center;
+            color: $white;
+        }
+
+    }
+}

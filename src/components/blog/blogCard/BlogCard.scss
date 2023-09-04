@@ -1,0 +1,94 @@
+@import '../../../Configure/mixin.scss';
+@import '../../../Configure/variable.scss';
+
+.blog-card{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    height: 538px;
+    width: calc(100% /3);
+    border-radius: 16px;
+    overflow: hidden;
+    margin-right: 20px;
+    cursor: pointer;
+    .image-section{
+        width: 100%;
+        height: 250px;
+        overflow: hidden;
+        @include transition-ease;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            display: block;
+        }
+    }
+    .content-section{
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        padding-bottom: 55px;
+        position: relative;
+        flex-grow: 1;
+        background-color: white;
+        @include transition-ease;
+        .info-bar{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            .info-main{
+                display: flex;
+               gap: 25px;
+               margin-bottom: 10px;
+           
+               
+
+                .user-name,.posted-data{
+                   
+                    @include typography(18px,500,20px)
+                }
+            }
+            
+        }
+        .h3{
+            margin-bottom: 10px;
+            @include ellipsis;
+        }
+        .p{
+           color: $white;
+            @include ellipsis;
+        }
+        .readmore-cta{
+            display: flex;
+            align-items: center;
+            position: absolute;
+            bottom: 30px;
+            left: 30px;
+            cursor: pointer;
+            .text{
+                @include typography(18px,500,20px);
+            }
+        }
+    }
+   &:hover{
+    .image-section{
+        transform: scale(1.2);
+    }
+    .content-section{
+        background-color: $black-light;
+        color: $white;
+       
+        p{
+            color: $white;
+        }
+      
+      .arrow-icon{
+        color: $black-light;
+      }
+        
+    }
+   }
+}
